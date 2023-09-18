@@ -1,0 +1,40 @@
+.data
+    # Vetores de entrada
+    vetor1: .word 1, 2, 3, 4, 5
+    vetor2: .word 6, 7, 8, 9, 10
+
+    # Vetor de saída (inicializado com zeros)
+    vetorResultado: .space 20
+
+    # Constante para o tamanho dos vetores
+    tamanhoVetor: .word 5
+
+.text
+    main:
+        # Início do programa
+        la $t0, vetor1           # Carrega o endereço de vetor1 em $t0
+        la $t1, vetor2           # Carrega o endereço de vetor2 em $t1
+        la $t2, vetorResultado   # Carrega o endereço de vetorResultado em $t2
+        lw $t3, tamanhoVetor     # Carrega o tamanho dos vetores em $t3
+
+        loop:
+            # Carrega os elementos dos vetores de entrada
+            lw $s0, 0($t0)       # Carrega um elemento de vetor1 em $s0
+            lw $s1, 0($t1)       # Carrega um elemento de vetor2 em $s1
+
+            # Soma os elementos e armazena no vetor de saída
+            add $s2, $s0, $s1    # Soma os elementos em $s0 e $s1
+            sw $s2, 0($t2)       # Armazena o resultado em vetorResultado
+
+            # Atualiza os ponteiros para os próximos elementos
+            addi $t0, $t0, 4     # Incrementa o ponteiro de vetor1
+            addi $t1, $t1, 4     # Incrementa o ponteiro de vetor2
+            addi $t2, $t2, 4     # Incrementa o ponteiro de vetorResultado
+
+            # Verifica se chegou ao final dos vetores
+            subi $t3, $t3, 1     # Decrementa o contador
+            bnez $t3, loop       # Volta para o início do loop se o contador não for zero
+
+        # Fim do programa
+        li $v0, 10              # Código de saída do programa
+        syscall
