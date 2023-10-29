@@ -1,0 +1,154 @@
+body {
+  justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+.header {
+  background-color: #6c32ff;
+  color: #fff; 
+  padding: 25px 30px; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top-left-radius: 25px; 
+  border-top-right-radius: 25px;
+}
+.button-style {
+  list-style: none;
+  padding: 10px 20px; 
+  background-color: #fff; 
+  color: #000; 
+  border-radius: 35px; 
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.sobre {
+  text-align: center;
+  align-items: center;
+  font: 'Inter', sans-serif;
+}
+.eu {
+  text-align: center; 
+  max-width: 400px; 
+  padding: 20px; 
+  background-color: #f0f0f0; 
+  border-radius: 10px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  margin-left: 280px; 
+  align-items: center;
+}
+p {
+  margin: 0;
+}
+.content {
+   display: flex;
+   align-items: center;
+}
+
+.image img {
+   width: 150px; 
+   height: auto; 
+   margin-right: 10px; 
+   margin-left: 300px; 
+   border-radius: 200px;
+}
+
+.eu p {
+   margin: 0; 
+}
+.conhecimento{
+   text-align: center;
+   font: 'Inter', sans-serif;
+}
+.container {
+   background: #7954d8;
+   border-radius: 30px;
+   width: 1200px;
+   height: 372px;
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: flex-start;
+   padding: 20px;
+   box-sizing: border-box;
+   margin-left: 350px;
+}
+
+.buttons {
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
+}
+
+.buttons button {
+   background-color: white;
+   border: none;
+   padding: 10px 20px;
+   cursor: pointer;
+   border-radius: 35px;
+   width: 150px;
+}
+
+.topics {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   height: 100%; /* Isso garante que o contêiner ocupe toda a altura do pai */
+   font: 500 15px 'Inter', sans-serif;
+}
+
+.topics p {
+   margin: 70px 10px;
+   text-align: left;
+   display: none;
+ 
+}
+.Contato {
+   text-align: center;
+   font: 'Inter', sans-serif;
+   position: relative;
+   z-index: 1;
+}
+
+.contatos {
+   text-align: center;
+   margin-top: 20px;
+   position: relative;
+   z-index: 1;
+}
+
+/* Estilos para os ícones */
+.icons {
+   position: relative;
+   top: -10px;
+   z-index: 1;
+}
+
+/* Adicione margem à direita dos ícones para espaçamento entre eles */
+.icons a {
+   margin-right: 30px;
+   margin-left: 100px;
+}
+
+footer {
+   background-color: black;
+   color: white;
+   text-align: center;
+   padding: 10px;
+   width: 100%;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   z-index: 0;
+}
+
+
+
+
+
+
+
+
