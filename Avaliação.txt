@@ -1,0 +1,3 @@
+Desafio 1 = 0,8
+Desafio 2 = 1
+Desafio 3 = 0,8
